@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: '@TODO name this role'
+  description: installs dnsmasq and proxies through to consul and marathon-dns
   company: BlackRock
   license:
     - MIT
@@ -10,12 +10,6 @@ galaxy_info:
     - name: EL
       versions:
         - 7
-    - name: Fedora
-      versions:
-        - 21
-    - name: Ubuntu
-      versions:
-        - trusty
   galaxy_tags:
     - development
 
