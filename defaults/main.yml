@@ -1,2 +1,9 @@
 ---
 # defaults file for dnsmasq
+consul_dns_domain : 'consul'
+consul_dns_upstream : '127.0.0.1'
+consul_dns_port : 8600
+
+mesos_dns_domain : 'mesos'
+mesos_dns_upstream : '127.0.0.1'
+mesos_dns_port : 8053

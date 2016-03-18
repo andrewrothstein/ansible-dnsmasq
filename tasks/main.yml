@@ -2,3 +2,16 @@
 - name: install dnsmasq with package manager
   package: name=dnsmasq state=present
 
+- name: install configs
+  template: >-
+    src={{item}}.j2
+    dest=/{{item}}
+    owner=root
+    group=root
+    mode=0644
+  with_items:
+    - 'etc/dnsmasq.d/10-consul'
+    - 'etc/dnsmasq.d/20-mesos-dns'
+
+- name: launch dnsmasq
+  service: name=dnsmasq enabled=yes state=started
