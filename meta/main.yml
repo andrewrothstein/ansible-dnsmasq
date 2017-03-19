@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs dnsmasq and proxies through to consul and marathon-dns
+  description: installs dnsmasq
   company: BlackRock
   license:
     - MIT
@@ -10,8 +10,22 @@ galaxy_info:
     - name: EL
       versions:
         - 7
+    - name: Fedora
+      versions:
+        - 23
+        - 24
+        - 25
+    - name: Ubuntu
+      versions:
+        - ubuntu_trusty
+        - ubuntu_xenial
+    - name: Alpine
+      versions:
+        - all
   galaxy_tags:
-    - development
+    - dns
+    - dhcp
+    - bootp
 
 dependencies: []
   
