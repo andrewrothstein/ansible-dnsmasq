@@ -17,8 +17,8 @@ galaxy_info:
         - 25
     - name: Ubuntu
       versions:
-        - ubuntu_trusty
-        - ubuntu_xenial
+        - trusty
+        - xenial
     - name: Alpine
       versions:
         - all
