@@ -15,10 +15,16 @@ galaxy_info:
         - 23
         - 24
         - 25
+        - 26
+        - 27
     - name: Ubuntu
       versions:
         - trusty
         - xenial
+    - Debian:
+      versions:
+        - jessie
+        - stretch
     - name: Alpine
       versions:
         - all
