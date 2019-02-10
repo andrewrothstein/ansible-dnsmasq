@@ -17,11 +17,14 @@ galaxy_info:
         - 25
         - 26
         - 27
+        - 28
+        - 29
     - name: Ubuntu
       versions:
         - trusty
         - xenial
-    - Debian:
+        - bionic
+    - name: Debian
       versions:
         - jessie
         - stretch
@@ -34,4 +37,3 @@ galaxy_info:
     - bootp
 
 dependencies: []
-  
