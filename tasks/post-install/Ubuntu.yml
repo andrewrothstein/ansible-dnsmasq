@@ -7,4 +7,4 @@
     name: systemd-resolved
     state: stopped
     enabled: no
-  notfiy: restart_dnsmasq
+  # notfiy: restart_dnsmasq
