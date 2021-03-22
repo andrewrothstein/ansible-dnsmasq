@@ -17,3 +17,5 @@
     state: present
   notify:
     - disable_systemd-resolved
+- name: trigger handler execution
+  meta: flush_handlers
