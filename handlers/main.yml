@@ -1,8 +1,9 @@
 ---
 # handlers file for dnsmasq
-- name: restart_dnsmasq
+- name: disable_systemd-resolved
   become: yes
   become_user: root
   service:
-    name: dnsmasq
-    status: restarted
+    name: systemd-resolved
+    state: stopped
+    enabled: no
