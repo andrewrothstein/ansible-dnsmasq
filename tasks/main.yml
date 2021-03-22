@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: load pre-installation platform specific tasks
-  include_vars: '{{ item }}'
+  include_tasks: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
