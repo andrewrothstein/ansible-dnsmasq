@@ -1,5 +1,6 @@
 ---
 - name: disable systemd-resolved service
+  when: ansible_distribution_version is version('18.04', operator='>=')
   service:
     name: systemd-resolved
     state: stopped
