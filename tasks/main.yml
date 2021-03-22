@@ -9,7 +9,13 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: load pre-installation platform specific tasks
+- name: install dnsmasq with package manager
+  become: yes
+  become_user: root
+  package:
+    name: dnsmasq
+    state: present
+- name: load post-installation platform specific tasks
   include_tasks: '{{ item }}'
   with_first_found:
     - files:
@@ -18,10 +24,4 @@
         - '{{ ansible_os_family }}.yml'
       skip: true
       paths:
-        - '{{ role_path }}/tasks/pre-install'
-- name: install dnsmasq with package manager
-  become: yes
-  become_user: root
-  package:
-    name: dnsmasq
-    state: present
+        - '{{ role_path }}/tasks/post-install'

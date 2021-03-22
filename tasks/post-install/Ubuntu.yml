@@ -5,3 +5,4 @@
     name: systemd-resolved
     state: stopped
     enabled: no
+  notfiy: restart_dnsmasq
