@@ -1,5 +1,7 @@
 ---
 - name: disable systemd-resolved service
+  become: yes
+  become_user: root
   when: ansible_distribution_version is version('18.04', operator='>=')
   service:
     name: systemd-resolved
