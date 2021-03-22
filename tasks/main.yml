@@ -10,11 +10,10 @@
       paths:
         - '{{ role_path }}/vars'
 - name: install dnsmasq with package manager
-  become: yes
+  become: '{{ dnsmasq_privilege_escalate }}'
   become_user: root
   package:
     name: dnsmasq
     state: present
-- name: trigger disable_systemd-resolved handler
-  when: (ansible_distribution == 'Ubuntu') and (ansible_distribution_version is version('18.04', operator='>='))
-  notify: disable_systemd-resolved
+  notify:
+    - disable_systemd-resolved

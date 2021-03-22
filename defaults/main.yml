@@ -1,1 +1,2 @@
 ---
+dnsmasq_privilege_escalate: True
