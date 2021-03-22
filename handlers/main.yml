@@ -3,7 +3,7 @@
 - name: disable_systemd-resolved
   become: '{{ dnsmasq_privilege_escalate }}'
   become_user: root
-  when: (ansible_distribution == 'Ubuntu') and (ansible_distribution_version is version('18.04', operator='>='))
+  when: (not dnsmasq_install_pkg_only) and dnsmasq_disable_systemd-resolved
   service:
     name: systemd-resolved
     state: stopped

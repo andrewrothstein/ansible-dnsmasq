@@ -1,2 +1,3 @@
 ---
 # vars file for dnsmasq
+dnsmasq_disable_systemd-resolved: False

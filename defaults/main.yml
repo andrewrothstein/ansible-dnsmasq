@@ -1,2 +1,3 @@
 ---
 dnsmasq_privilege_escalate: True
+dnsmasq_install_pkg_only: True
