@@ -1,14 +1,6 @@
 ---
-- name: Gather the package facts
-  package_facts:
-    manager: auto
-
-- name: Printing packages in Ubuntu
-  ansible.builtin.debug:
-    msg: "{{ ansible_facts.packages }}"
-
-# - name: Stop service httpd, if started
-#   service:
-#     name: systemd-resolved
-#     state: stopped
-#     enabled: no
+- name: disable systemd-resolved service
+  service:
+    name: systemd-resolved
+    state: stopped
+    enabled: no
