@@ -15,5 +15,20 @@
   package:
     name: dnsmasq
     state: present
-  notify:
-    - disable_systemd_resolved
+- name: post-installation operations
+  become: '{{ dnsmasq_privilege_escalate }}'
+  become_user: root
+  when: not dnsmasq_install_pkg_only
+  block:
+    - name: disable_systemd_resolved
+      when: dnsmasq_disable_systemd_resolved
+      service:
+        name: systemd-resolved
+        state: stopped
+        enabled: no
+    - name: activate dnsmasq service
+      when: dnsmasq_activate
+      service:
+        name: dnsmasq
+        state: started
+        enabled: yes

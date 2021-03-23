@@ -1,10 +1,2 @@
 ---
 # handlers file for dnsmasq
-- name: disable_systemd_resolved
-  become: '{{ dnsmasq_privilege_escalate }}'
-  become_user: root
-  when: (not dnsmasq_install_pkg_only) and dnsmasq_disable_systemd_resolved
-  service:
-    name: systemd-resolved
-    state: stopped
-    enabled: no
