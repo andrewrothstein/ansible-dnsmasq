@@ -16,4 +16,4 @@
     name: dnsmasq
     state: present
   notify:
-    - disable_systemd-resolved
+    - disable_systemd_resolved
