@@ -1,7 +1,7 @@
 ---
-- name: install dnsmasq with package manager
+- name: installing packages
   become: yes
   become_user: root
   package:
-    name: dnsmasq
+    name: '{{ dnsmasq_pkgs }}'
     state: present

@@ -1,6 +1,6 @@
 andrewrothstein.dnsmasq
 ===========================
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-dnsmasq.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-dnsmasq)
+![Build Status](https://github.com/andrewrothstein/ansible-dnsmasq/actions/workflows/build.yml/badge.svg)
 
 A role for installing [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) with the operating system package manager
 
