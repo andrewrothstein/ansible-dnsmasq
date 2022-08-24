@@ -1,6 +1,6 @@
 ---
-- name: installing packages
-  become: yes
+- name: installing dnsmasq OS packages
+  become: true
   become_user: root
   package:
     name: '{{ dnsmasq_pkgs }}'
