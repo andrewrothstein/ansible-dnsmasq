@@ -1,7 +1,7 @@
 ---
-- name: installing dnsmasq OS packages
+- name: Installing OS packages
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ dnsmasq_pkgs }}'
     state: present
